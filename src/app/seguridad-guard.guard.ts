@@ -17,11 +17,11 @@ export class SeguridadGuardGuard implements CanActivate {
 
   canActivate(): boolean{
     
-    let isLogged:boolean = false;
+    let isLogged:boolean = false;                                                                                                                                                                                                                 
     this.stateservice.getisLogged().subscribe((value) => {
       isLogged = value;
       if(!value){
-        this.router.navigateByUrl('/pag-principal');
+        this.router.navigateByUrl('/inicio');
       }
     })
 
